@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Editar Música</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-primary">
+            <a class="navbar-brand" href="/musicas">Catalogo Musical</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section>
+            <div class="container mt-5" style="width: 60%; padding-bottom: 30px;">
+                
+                <form method="post">
+    
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="titulo" th:field="${musica.titulo}">
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="autor" th:field="${musica.autor}">
+                    </div>
+    
+                    <textarea id="summernote" type="text" class="form-control" name="letra"
+                        th:field="${musica.letra}"></textarea>
+    
+                    <small class="form-text text-muted">(*) Campos obrigatórios</small>
+    
+                    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Atualizar</button>
+    
+                    <a href="/musicas" class="btn btn-light" role="button" style="margin-top: 10px;">Cancelar</a>
+    
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
